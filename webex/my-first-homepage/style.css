@@ -1,0 +1,11 @@
+h1 {
+  color: red;
+}
+
+.black-box {
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding: 20rem 1rem;
+  margin: 5rem;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WebExpertコーステンプレート</title>
+  </head>
+  <body>
+    <h1>１ ＋ １ ＝</h1>
+    <button id="kotae1">1</button>
+    <button id="kotae2">2</button>
+    <button id="kotae3">3</button>
+    <div id="seikai">答えは？</div>
+
+    <script>
+      // button 要素を id をもとに取得して、定数に代入する
+      const kotae1 = document.getElementById("kotae1")
+      const kotae2 = document.getElementById("kotae2")
+      const kotae3 = document.getElementById("kotae3")
+      const seikai = document.getElementById("seikai")
+
+      // ボタンを押したら...
+      kotae1.onclick = function() {
+        // textContent みたいなやつで正解不正解を表示する
+        seikai.textContent = "不正解"
+      }
+      kotae2.onclick = function() {
+        // textContent みたいなやつで正解不正解を表示する
+        seikai.textContent = "正解"
+      }
+      kotae3.onclick = function() {
+        // textContent みたいなやつで正解不正解を表示する
+        seikai.textContent = "不正解"
+      }
+    </script>
+  </body>
+</html>
