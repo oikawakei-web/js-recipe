@@ -11,3 +11,11 @@
 .rounded {
   border-radius: 50%;
 }
+
+.triangle{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 90px 120px 90px;
+  border-color: transparent white #000000 white;
+}
