@@ -1,14 +1,25 @@
-const waterButton = document.getElementById("water-button")
-const ochaButton = document.getElementById("ocha-button")
+const input = document.getElementById("memo-input")
+const addButton = document.getElementById("add-button")
+const memoContainer = document.getElementById("memo-container")
 
-// 退勤ボタン
-waterButton.onclick = function () {
-  isWorking = false
-  draw()
+addButton.onclick = function() {
+    const card = createCard(input.value)
+    memoContainer.append(card)
+
+    input.value = ""
 }
 
-// 打ち上げボタン
-ochaButton.onclick = function () {
-  isInSpace = true
-  draw()
+const createCard = function(text) {
+    const card = document.createElement("div")
+    card.textContent = text
+    card.className = "card"
+
+    const deleteButton = document.createElement("button")
+    deleteButton.textContent = "削除"
+    deleteButton.onclick = function() {
+        card.remove()
+    }
+    card.append(deleteButton)
+
+    return card
 }
