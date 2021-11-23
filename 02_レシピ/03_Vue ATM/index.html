@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>入力画面</h2>
+      <input type="number" v-model="nyuryokugaku" v-on:input="osenaiMethod" />
+      <div>入力額:{{ nyuryokugaku }}円</div>
+      <button v-on:click="nyukin">入金</button>
+      <button v-on:click="syukin" v-bind:disabled="osenai">出金</button>
+      <h2>口座残高</h2>
+      <div>残高:{{ zandaka }}円</div>
+      <h2>取引記録</h2>
+      <div v-for="log in logs">{{ log }}</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
